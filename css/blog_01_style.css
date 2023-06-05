@@ -1,0 +1,267 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+* {
+    margin: 0; padding: 0;
+}
+
+ul, ol {list-style: none;}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 로고 */
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo h1{
+    font-family: 'Paytone One', sans-serif;
+    font-weight: normal;
+}
+.logo h1 a {color: #83a4a8;;}
+
+
+/* 정렬 */
+
+
+
+/* 메뉴 */
+.box2 {background-color:#7cbac1;}
+.menu {}
+.menu ul {display: flex;}
+.menu ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+}
+.menu ul li a:hover {
+    background-color: #75dbe7;
+}
+
+
+/* 카테고리 */
+.category {}
+.category ul {display: flex;}
+.category ul li {
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+.category ul li a {
+    background-color: #75dbe7;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+
+/* 박스3 */
+
+.box3 h1 {
+    font-size: 36px;
+}
+
+/* 박스3이미지조절 */
+img {
+    max-width: 100%;
+}
+
+.box3 h2 {
+    margin-top: 40px;
+    padding-left: 10px;
+    border-left: 10px solid #7cbac1;
+    font-weight: normal;
+}
+.box3 p {
+    margin-top: 15px;
+}
+
+/* sns설정 */
+.snsset {margin-top: 40px;}
+.snsset ul {display: flex;}
+.snsset ul li {width: 33.3333%;}
+.snsset ul li a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+}
+.snsset ul li:nth-child(1) a {background-color: #1da1f2;}
+.snsset ul li:nth-child(2) a {background-color: #1877f2;}
+.snsset ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,f77737+100 */
+    background: #833ab4; /* Old browsers */
+    background: -moz-linear-gradient(left,  #833ab4 0%, #f77737 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #833ab4 0%,#f77737 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #833ab4 0%,#f77737 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#f77737',GradientType=1 ); /* IE6-9 */
+    }
+
+/* 관련기사 (선생님꺼 복붙..)*/
+
+.relation {
+    background-color: #f0f0d4;
+    padding: 20px;
+    margin-top: 40px;
+}
+.relation h1 {
+    color: #727224;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.relation ul {display: flex;
+                flex-wrap: wrap;}
+.relation ul li {width: 25%;}
+.relation ul li a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+.relation img {max-width: 100%;}
+.relation .txt
+
+/* 박스4 */
+
+aside {
+    margin-bottom: 20px;
+}
+
+.box4 h3 {
+    border-bottom: 2px dotted #ddd;
+    margin-bottom: 15px;
+    color: #636363;
+}
+.box4 li {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+/* 추천기사 */
+.recommend {}
+.recommend ul {}
+.recommend ul li {}
+.recommend ul li a { 
+    display: block;
+    font-size: 14px;
+    position: relative;
+}
+.recommend .txt {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+}
+.recommend img {
+    width: 100%;
+}
+
+
+
+.box5 {border-top: 1px solid #ddd;}
+
+
+/* 인기기사 */
+
+.popular ul {}
+.popular ul li {
+    border-bottom: dotted 2px #ddd;
+    padding-top: 5px;
+}
+.popular ul li a {
+    color: #2288ee;
+    font-size: 12px;
+}
+.popular ul li a::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.popular img {
+    float: left;
+}
+.popular .txt {
+    float: left;
+}
+.popular span {
+    font-size: 12px;
+    color: #636363;
+    display: block;
+}
+
+
+/* 박스3,4,5 간격조절 */
+.box3 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 30px;
+    
+}
+.box4 {
+    padding-top: 40px;
+    padding-bottom: 40px;    
+}
+.box5 {
+    padding-top: 10px;
+}
+
+
+
+/* 1. 모바일구간 599px이하 */
+
+@media (max-width:599px) {
+
+    .box4{
+        display: flex;
+    }
+
+    /* sns */
+    .snsset span{
+        text-indent: -9999px;
+        display: inline-block;
+    }
+    .relation ul li {width: 50%;}
+    .menu ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+
+
+/* 2. 태블릿이하구간 600px~767px까지 */
+
+@media (min-width:600px) and (max-width:767px) {
+
+    .box4{
+        display: flex;
+    }
+
+}
+
+
+/* 3. 태블릿~데스크탑 768px이상 구간 */
+
+@media (min-width:768px) {
+    .boxA {display: flex;}
+    .box3 {width: 70%;}
+    .box4 {width: 30%;}
+}
+
+/* 4. 일정크기 가로값 변동없는구간 1040px */
+
+@media (min-width:1040px) {
+
+    .box1, .boxA, .menu, .copyright {
+        margin: 0 auto;
+        width: 1000px;
+    }
+
+}

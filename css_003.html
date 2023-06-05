@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS레이아웃</title>
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="css/style_003.css">
+</head>
+<body>
+    <h1>CSS레이아웃</h1>
+    <p>CSS를 활용하여 공간을 나누듯 배치를 하기위해 여러속성을 사용한다.</p>
+
+    <h2>가시속성</h2>
+    <p>display : 태그가 화면에 보이는 방식을 지정한다. </p>
+    <ul class="layout001">
+        <li>none - 화면에서 안보이며 공간도 함께사라진다. 또한 웹접근성으로도 확인할수 없다.</li>
+        <li>inline - 특별한 공간의 값을 가지고 있지않다. width, height등의 값을 지정할 수 없다. margin, padding의 경우 요소를 기준으로 하기 때문에 좌우는 적용이되나, 상하는 적용되지않는다.</li>
+        <li>inline-block - inline과 블럭의 중간역할 두속성의 모든성질을 가지고 있음</li>
+        <li>block - 가로값 화면기준 100%로 적용 / 자동줄바꿈기능이 있다.</li>
+    </ul>
+
+    <div class="box001">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, necessitatibus minus. Perspiciatis, veniam dolorum? Modi ad aperiam molestiae consequatur eaque aspernatur voluptate nulla voluptates, enim nostrum maxime impedit molestias reprehenderit!
+        <span>inline</span>
+        <span>inline-block</span>
+        <span>block</span>
+    </div>
+
+    <h2>float속성</h2>
+    <p>
+        자동줄바꿈의 성질이 있는 블럭을 한줄에 2개이상의 요소를 배치하고자 할때, 사용/
+        사전적의미로 물이나 공중에뜨다 라는 의미로 블럭요소를 강제로 띄워서 화면에 좌우로 배치
+    </p>
+    <ul class="layout002">
+        <li>left : 왼쪽에 요소를 띄워서 나열한다.</li>
+        <li>right : 오른쪽에 요소를 띄워서 나열한다.</li>
+    </ul>
+    
+    <ul class="box002">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+
+
+    <h2>flex속성</h2>
+    <p>태그를 수평, 수직으로 자유롭고 유연하게 변동할수 있는 기능</p>
+    <ul>
+        <li>Container - 부모요소를 부르는 명칭으로 사용</li>
+        <li>items - 자식요소를 부르는 명칭</li>
+    </ul>
+
+    <p>Container 속성에는 <b>display</b>, flex-flow(묶음기능), flex-derection(수평,수직), 
+        <b>justify-content(아이템수평정렬)</b>,<b>aline-items(아이템수직정렬)</b>
+    </p>
+    <p>items속성에는 flex, grow(증가너비), shink(감소너비), basis(크기배분), aline-self(각자조정)</p>
+    
+    <p>자손자에만 오롯이 적용된다. 후손자 적용안됨</p>
+
+    <ul class="box003">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+    <h2>position - 요소를 자유롭게배치레이아웃</h2>
+    <p>여러요소를 순서와 상관없이 화면에 가로세로 좌표값을 기준으로 배치<br>
+        특정영역안에서 위치조절을 자유롭게 할 수 있어 유연한 레이아웃이 가능
+    </p>
+
+    <ul>
+        <li>relative : 적용된 요소의 현재위칫값을 기준으로 상대위치를 지정한다.
+            (기준값 - 부모요소에 주되게 사용 또는 z-index값을 적용할시 사용)      
+        </li>
+        <li>absolute : 부모요소에 특정구간을 기준으로 절대위치를 지정한다.
+            (움직이는 요소)<br>
+            부모요소에 relative를 지정하지 않을경우
+            window를 기준으로 움직인다.
+        </li>
+        <li>
+            fixed : 웹브라우저를 기준으로 절대위치를 지정한다.
+            (화면기준으로 보임)
+        </li>
+    </ul>
+
+    <div class="box004">
+        <p>relative</p>
+        <p>absolute</p>
+        <p>fixed</p>
+    </div>
+
+    <div class="box005">
+        <P>position1</P>
+        <P><span>position2</span></P>
+        <P>positio3</P>
+    </div>
+
+    <h3>z-index 속성</h3>
+    <p> position을 사용한 요소끼리의 겹쳐서 있는 순서를 제어할 수 있다.<br>
+        값이 클수록 위로 올라온다.
+    </p>
+
+    <div class="box006">
+        <p>box1</p>
+        <p>box2</p>
+        <p>box3</p>
+    </div>
+
+
+</body>
+</html>

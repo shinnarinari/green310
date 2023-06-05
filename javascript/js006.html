@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_객체</title>
+</head>
+<body>
+    <h1>자바스크립트_객체</h1>
+    <p>객체는 데이터 값을 필요한 대로 만들어 사용하는 변수 또는
+        속성이라는 표현으로 내장객체,자료형객체 등으로 나뉠수 있다.
+    </p>
+
+    <ul>
+        <li>
+            내장객체 : 자바스크립트에서 제공해 주는 객체
+            <ul>
+                <li>Number()</li>
+                <li>Math()</li>
+                <li>Date()</li>
+            </ul>
+        </li>
+        <li>
+            자료형객체 : 변수로 작성을 해서 글씨로 보여지게 하는 객체
+            여래개를 나열해서 작성 할 수 있음
+        </li>
+    </ul>
+
+    <script>
+        // 배열형객체
+        let array = ['국어','수학','영어','과학'] 
+        // array 배열
+        // 0,1,2,3
+        console.log(array)
+        console.log(array[2])
+
+        let product ={
+            제품명 : '웹사이트리뉴얼',
+            단가 : '8000만원',
+            프로그램 : '비주얼스튜디오코드'
+
+        };
+
+        console.log(product['제품명'])
+        console.log(product.단가)
+        // 점찍고 작성해도 문제없음
+
+        // 내장객체
+        // 외워
+        let date = new Date()
+        console.log(date) 
+        let dateInfo = {
+
+            year:date.getFullYear(),
+            month:date.getMonth(),
+            date:date.getDate()
+        }
+        let day = date.getDay()
+        // ^^수로 나오나와 글씨로 변환해야한다. VV
+        let dayName = ['일','월','화','수','목','금','토',]
+
+        console.log(dateInfo.year)
+        console.log(day)
+
+        console.log(dayName[day])
+
+        console.log(dateInfo.month+1)
+
+
+    </script>
+
+</body>
+</html>

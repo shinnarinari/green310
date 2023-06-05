@@ -1,0 +1,62 @@
+@charset 'utf-8';
+
+
+/* 아티클설정 */
+
+
+
+/* 아티클 div 설정 */
+
+article div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* div설정을 하지않고 article:nth-child(1)에 배경이미지를 집어넣을겨웅
+article .bg 설정해놓은 size, repeat, postition이 먹히지않게 된다. 
+또한 width값과 height값을 설정하지않을경우 이미지가 온전히 박스를 감싸지못해 
+넣어지지않아 설정해준다. 
+*/
+
+/* 이미지집어넣기 */
+
+article .bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+article .bg1 {background-image: url(../img/pic1.jpg);}
+article .bg2 {background-image: url(../img/pic2.jpg);}
+article .bg3 {background-image: url(../img/pic3.jpg);}
+article .bg4 {background-image: url(../img/pic4.jpg);}
+article .bg5 {background-image: url(../img/pic5.jpg);}
+article .bg6 {background-image: url(../img/pic6.jpg);}
+article .bg7 {background-image: url(../img/pic7.jpg);}
+
+/* 아티클 span 설정 */
+
+article span {
+    color: #fff;
+    font-size: 60px;
+    transform: scale(10);
+    /* trasnsform를 줄 때 font-size크기를 지정하기 
+    ?? 근데 굳이 trasnsform 할 필요없이 font-size로 해서 
+    hover값으로 작게하면 안되나?? 
+    상관없지만 유동으로 정확하게 비율적으로 맞추기 어려워서 스케일 값을 줌 
+    */
+    /* font-size: 160px; */
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+article span:hover {
+    transform: scale(1);
+    /* font-size: 80px; */
+    opacity: 1;
+    
+}

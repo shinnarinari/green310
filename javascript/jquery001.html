@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리_선택자</title>
+</head>
+<body>
+    <h1>제이쿼리란?</h1>
+    <p>제이쿼리는 2006년 발표된 자바스크립트 라이브러리로 무료로 사용가능한 오픈소스라이브러리이다.
+        특징은 다음과 같다.
+    </p>
+    <ul>
+        <!-- 제일많이 쓰는 이유vv -->
+        <li>쉬운문서객체모델과 관련된 처리구현</li>
+        <li>쉽고 일관된 이벤트연결구현</li>
+        <li>쉬운 시각적 효과구현</li> 
+    </ul>
+
+    <p>작성법 : CDN을 연결하고 CDN 연결태그 하단에 스크립트를 작성한다</p>
+    <!-- ^^먼저 연결해놓는게 가장 중요하다 -->
+    <p>자바스크립트의 window.onload와 같은 의미로 
+        $(document).ready(function(){실행문})의 구조로 작성되며
+        $(function(){
+            실행문
+        }) 으로 축약해서도 사용한다.
+    </p>
+
+    <h2>제이쿼리탐색구문</h2>
+    <p>선택자의 디테일한 부분으로 자손,부모,형제,순번 등에 활용된 형태</p>
+    
+    <ul class="box">
+        <li>$('선택자').eq() - 선택자의 순번의 의미로 0부터 차례대로 번호를 부른다</li>
+        <li><span>$('선택자').children()</span> - 선택자의 자손의 의미로 해당태그 또는 클래스명등을 부른다.</li>
+        <li>$('선택자').parent() - 선택자의 부모의 의미로 태그명을 붙이거나 생략가능</li>
+        <li>$('선택자').siblings() - 선택자의 형제의 의미로 본인은 제외된다.</li>
+        <li class="list001">$('선택자').find() - 선택자의 후손의 의미로 자손내부의 있는 요소 모두를 부를수 있다.</li>
+        <!-- ^^children과 find 구별하기 어려울때는 find로 통일하자 -->
+        <li>$('선택자').next() - 선택자의 다음요소</li>
+        <li>$('선택자').prev() - 선택자의 이전요소</li>
+        <li><em>$('선택자').not()</em> - 선택자의 제외요소 not안에 요소이름을 작성</li>
+    </ul>
+
+    <style>
+
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // 선택자 탐색구분 공부하기
+            $('.box li').eq(0).css({'color':'red'});
+
+            $('.box').children().css({'border':'1px solid #000'});
+
+            $('.box').parent().css('background','gray');
+            // 단일방식과 복수방식이 존재 ^^ 요녀석은 단일기법 작성방식
+
+            $('.list001').siblings().css({'font-weight':'bold'});
+
+            $('.box li').eq(3).next().css({'color':'blue'})
+
+            $('.box li').eq(3).next().css({'color':'blue'})
+        })
+    </script>
+</body>
+</html>

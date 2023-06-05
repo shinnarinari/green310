@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃5</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <!-- <div class="boxA">
+        <div class="box1">
+            <div class="box001-1">box1</div>
+            <div class="box001-2">box2</div>
+            <div class="box001-3">box3</div>
+            <div class="box001-4">box4</div>
+        </div>
+        <div class="box2">box5</div>
+    </div>
+    <div class="boxB">box6</div>
+    <div class="boxC">
+        <div class="box3-1">box7</div>
+        <div class="box3-2">box8</div>
+        <div class="box3-3">box9</div>
+        <div class="box3-4">box10</div>
+    </div>
+    <div class="boxD">
+        <div class="box4-1">box11</div>
+        <div class="box4-2">box12</div>
+        <div class="box4-3">box13</div>
+    </div>
+
+    <style>
+        .boxA {
+            display: flex;
+            align-items: start;
+        }
+
+        .box1 {
+            width: 30%;
+        }
+        .box2 {
+            width: 70%;
+        }
+
+        .boxC {
+            display: flex;
+        }
+        .boxC div {
+            flex-grow: 1;
+        }
+
+        .boxD {
+            display: flex;
+        }
+        .boxD div {
+            flex-grow: 1;
+        }
+    </style> -->
+
+    <!-- 선생님 -->
+
+    <div class="boxA">
+        <div class="boxA-1">
+            <div class="box1">박스1</div>
+            <div class="box2">박스2</div>
+            <div class="box3">박스3</div>
+            <div class="box4">박스4</div>
+        </div>
+        <div class="boxA-2">
+           박스5   
+        </div>
+    </div>
+    <div class="boxB">박스6</div>
+    <div class="boxC">
+        <div class="box7">박스7</div>
+        <div class="box8">박스8</div>
+        <div class="box9">박스9</div>
+        <div class="box10">박스10</div>
+    </div>
+    <div class="boxD">
+    
+        <div class="box11">박스11</div>
+        <div class="box12">박스12</div>
+        <div class="box13">박스13</div>
+    </div>
+
+    <style>
+
+        /* flex기반 가로정렬 */
+        /* 박스A설정 */
+    
+        /* .boxA {display: flex;
+            align-items: flex-start;}
+        .boxA-1 {width: 30%;}
+        .boxA-2 {width: 70%;} */
+    
+    /* 박스C설정 */
+        /* .boxC {display: flex;}
+        .boxC div {flex-grow: 1;} */
+    
+    /* 박스D설정 */
+    /* .boxD {display: flex;}
+        .boxD div {flex-grow: 1;} */
+    
+        /* 부모자after 설정 float:left사용 가로정렬 */
+        /* 박스A설정 */
+        .boxA:after {content: '';
+                    display: block;
+                    clear: both;}
+        .boxA-1 {float: left;
+                width: 30%;}
+        .boxA-2 {float: left;
+                width: 70%;}
+    
+        /* 박스C설정 */
+        .boxC:after {content: '';
+                    display: block;
+                    clear: both;}
+        .boxC div {float: left;
+                    width: 25%;}
+        
+        /* 박스D설정 */
+            .boxD:after {content: '';
+                    display: block;
+                    clear: both;}
+        .boxD div {float: left;
+                    width: 33.3333%;}
+    
+    </style>
+
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+    <script>
+        // 글부터 읽고 기능을 활용하라는 의미 window.onload
+        window.onload =function(){
+            
+            const btn= document .getElementById('btn');
+            const ti1= document .getElementById('ti1'),
+                    list= document.querySelector('ul'),
+                    listli = document.querySelectorAll('li')
+                    // querySelector 다수가 아니 딱 하나만 가져온다. 그중에 제일 위에 있는 아이 그래서
+                    // querySelectorAll  맨 뒤에 All를 붙여 모두가져온다.
+
+                     console.log(listli)
+
+            
+            const list1= document .getElementById('list1')
+            const list2= document .getElementById('list2')
+            const list3= document .getElementById('list3')
+            const list4= document .getElementById('list4')
+            const list5= document .getElementById('list5')
+            const list6= document .getElementById('list6')
+            const list7= document .getElementById('list7')
+
+            // const list1= document .getElementById('list1'),
+        //    list2= document .getElementById('list2'),
+        //     list3= document .getElementById('list3'),
+        //     list4= document .getElementById('list4'),
+        //     list5= document .getElementById('list5'),
+        //     list6= document .getElementById('list6'),
+        //     list7= document .getElementById('list7')
+
+                // ^^ const 빼고 작성해도 된다.
+
+
+
+            btn.onclick = function(){
+
+                alert('클릭하셨습니다.')
+            };
+
+            // vv마우스를 올렸을때 작동해라
+            ti1.onmouseenter = function(){
+
+                ti1.style.backgroundColor ='red'
+            }
+            ti1.onmouseout = function(){
+
+                ti1.style.backgroundColor ='transparent'
+            }
+
+            list1.onmouseenter = function(){
+            list1.style.backgroundColor ='red'
+            }
+
+            list2.onmouseenter = function(){
+            list1.style.backgroundColor ='orange'
+            list2.style.backgroundColor ='orange'
+            }
+
+            list3.onmouseenter = function(){
+            list1.style.backgroundColor ='yellow'
+            list2.style.backgroundColor ='yellow'
+            list3.style.backgroundColor ='yellow'
+            }
+
+
+            list4.onmouseenter = function(){
+            list1.style.backgroundColor ='green'
+            list2.style.backgroundColor ='green'
+            list3.style.backgroundColor ='green'
+            list4.style.backgroundColor ='green'
+            }
+
+            list5.onmouseenter = function(){
+            list1.style.backgroundColor ='blue'
+            list2.style.backgroundColor ='blue'
+            list3.style.backgroundColor ='blue'
+            list4.style.backgroundColor ='blue'
+            list5.style.backgroundColor ='blue'
+            }
+
+            list6.onmouseenter = function(){
+            list1.style.backgroundColor ='navy'
+            list2.style.backgroundColor ='navy'
+            list3.style.backgroundColor ='navy'
+            list4.style.backgroundColor ='navy'
+            list5.style.backgroundColor ='navy'
+            list6.style.backgroundColor ='navy'
+            }
+
+            list7.onmouseenter = function(){
+            list1.style.backgroundColor ='purple'
+            list2.style.backgroundColor ='purple'
+            list3.style.backgroundColor ='purple'
+            list4.style.backgroundColor ='purple'
+            list5.style.backgroundColor ='purple'
+            list6.style.backgroundColor ='purple'
+            list7.style.backgroundColor ='purple'
+            }
+
+            list.onmouseout = function(){
+            
+            list1.style.backgroundColor ='transparent'
+            list2.style.backgroundColor ='transparent'
+            list3.style.backgroundColor ='transparent'
+            list4.style.backgroundColor ='transparent'
+            list5.style.backgroundColor ='transparent'
+            list6.style.backgroundColor ='transparent'
+            list7.style.backgroundColor ='transparent'
+}
+        }
+    </script>
+</head>
+<body>
+     <h1 id="ti1" >자바스크립트_이벤트</h1>
+     <p>이벤트는 키보드를 누르거나 마우스를 클릭하는 것처럼
+        어떤현상이 프로그램에 영향을 미치는 것을 말합니다.
+     </p>
+     <ul>
+        <li id="list1">마우스이벤트</li>
+        <li id="list2">키보드이벤트</li>
+        <li id="list3">HTML 프레임이벤트</li>
+        <!-- 스크롤바 -->
+        <li id="list4">HTML 입력양식이벤트</li>
+        <li id="list5">사용자인터페이스이벤트</li>
+        <!-- ^^ 어플리케이션(얼굴인식,지문인식, 핑거)등 -->
+        <li id="list6">구조변화이벤트</li>
+        <li id="list7">터치이벤트</li>
+        <!-- 요즘 많이 쓰이기는 하지만 웹상 마우스로는 잘 쓰지않음 -->
+     </ul>
+
+     <p>작성법<br>
+        
+        일반적인방식 : window.onload = function(){실행문}
+    </p>
+    <p>설명 window는 선택자의 자리, onload 는 이벤트속성이라는 이름으로
+        on를 제외한 load가 이벤트 이름 또는 이벤트타입이라 불리고,
+        이벤트 속성에 넣는 함수를 이벤트리스너 또는 이벤트핸들러 라고 한다.
+    </p>
+    <button id="btn">클릭</button>
+
+    <h2>추가선택자</h2>
+    <p>id값을 배번 HTML 요소에 추가하는데 불편함이 있음
+        getElementById 값 대신에
+        querySelector 또는 querySelectorAll 이라는 요소로 객체로 불려낼수 있다.<br>
+        이때, querySelector는 html태그 중 중복요소가 있을시 맨 처음에 있는 요소만 부르고, 
+        querySelectorAll은 모든 요소를 부른다.
+    </p>
+
+    <div id="toggle">
+        <span></span>
+        <ul id="gnb">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+    <div id="toggle2">
+        <span></span>
+        <ul id="gnb2">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+    </div>
+
+    <style>
+        #toggle span {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            display: block;
+            cursor: pointer;
+        }
+
+        #toggle span:hover {
+            background-color: red;
+        }
+
+        #gnb {
+            width: 100px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+
+        #gnb li {
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 2px;
+            background-color: blue;}
+
+
+
+
+        #toggle2 {
+            margin-top: 50px;
+        }
+
+        #toggle2 span {
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            display: block;
+            cursor: pointer;
+        }
+
+        #toggle2 span:hover {
+            background-color: red;
+        }
+
+        #gnb2 {
+            width: 100px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+
+        #gnb2 li {
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 2px;
+            background-color: blue;}
+
+    </style>
+
+    <script>
+        // 토글의 span에 클릭을 하면 gnb가 나타나라
+
+        let btn = document.querySelector('span'),
+        gnb = document.getElementById('gnb'),
+        ii = 0
+
+        btn.onclick = function(){
+
+            ii++;
+            if(ii==2)
+            ii=0
+            console.log(ii);
+
+            if(ii==1){
+                gnb.style.display='block'
+            }else{
+                gnb.style.display='none'
+            }
+
+        // if( gnb.style.display='block'){
+
+        //     gnb.style.display='none'
+        // }else{
+        //     gnb.style.display='block'}
+        
+        }
+    </script>
+
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        // toggle2의 span을 클릭했을때, gnb2가 나타나라
+
+        $('#toggle2>span').click(function(){
+
+            $('#gnb2').fadeToggle()
+        })
+    </script>
+    
+
+</body>
+</html>

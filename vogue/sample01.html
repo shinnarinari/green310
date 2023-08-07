@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <em></em>
+        <nav></nav>
+        <section>
+            <div class="home"></div>
+            <div class="girl"></div>
+            <div class="kide"></div>
+        </section>
+    </div>
+
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        ul,ol {list-style: none;}
+        a{text-decoration: none;
+        color: #000;}
+        img {vertical-align: bottom;}
+
+        #wrap {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: cadetblue;
+            perspective: 500px;
+        }
+
+        #wrap em {
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            z-index: 999;
+            position: fixed;
+            left: 50px;
+            top: 50px;
+        }
+
+        #wrap nav {
+            width: 150px;
+            height: 100%;
+            position: fixed;
+            background-color: burlywood;
+            z-index: 10;
+            transform: rotateY(15deg);
+            transform-origin: left;
+        }
+
+        #wrap section {
+            width: 100%;
+            height: 100%;
+            background-color: coral;
+            transform: rotateY(-6deg);
+            transform-origin: right;
+        }
+    </style>
+</body>
+</html>
